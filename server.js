@@ -23,4 +23,6 @@ server.start(function () {
     console.log('Server running at:', server.info.uri);
 });
 
+module.exports = server;
+
 //taken from http://hapijs.com/tutorials
