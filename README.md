@@ -1,4 +1,4 @@
 
 CodeShip Build Status
 
-![](https://codeship.com/projects/89783/status?branch=master)
+![](https://codeship.com/projects/8a867ed0-06a9-0133-39e5-4e652829644b/status?branch=master)
