@@ -9,6 +9,6 @@ test('up', function (t) {
     url: '/'
   }, function (res) {
     t.equal(res.statusCode, 200);
-    t.equal(res.result, 'Hello, world!');
+    t.equal(res.result, 'Hello, world!!!');
   });
 });
