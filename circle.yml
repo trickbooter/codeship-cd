@@ -20,7 +20,7 @@ deployment:
     branch: master
     commands:
       - docker tag trickbooter/docker-cd tutum.co/trickbooter/docker-cd
-      - docker login tutum.co -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS tutum.co
       - docker push tutum.co/trickbooter/docker-cd
 
 ## Custom notifications
