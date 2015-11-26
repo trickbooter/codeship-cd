@@ -10,5 +10,5 @@ COPY . /usr/src/app
 
 EXPOSE 3000
 
-CMD [ "node", "/usr/src/app/index.js" ]
+CMD [ "node", "/usr/src/app/app.js" ]
 

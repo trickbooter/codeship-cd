@@ -1,21 +1,22 @@
 {
-  "name": "docker-codeship-continuous-delivery",
+  "name": "express_example",
   "version": "0.0.1",
-  "description": "Demonstrate continuous delivery with Docker & Codeship",
-  "main": "server.js",
+  "private": true,
   "scripts": {
-    "test": "node test.js",
-    "start": "node index.js"
+    "start": "node app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/trickbooter/docer-cd.git"
+  "engines": {
+    "node": "0.10.x"
   },
-  "author": "trickbooer",
-  "homepage": "https://github.com/trickbooter/docker-cd",
   "dependencies": {
-    "express": "^4.13.3"
+    "express": "3.1.0",
+    "jade": "0.28.1",
+    "stylus": "0.32.1"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
   },
   "devDependencies": {
-    "supertest": "^1.1.0"
+    "mocha": "1.15.1"
   }
+}
