@@ -28,3 +28,5 @@ notify:
   webhooks:
     # Trigger Docker hub build
     - url: https://registry.hub.docker.com/u/trickbooter/docker-cd/trigger/f0a5dc08-4692-44b1-a119-49c5f3ce2596/
+	# trigger redeployment on Tutem
+    - url: https://dashboard.tutum.co/api/v1/service/7de7842b-e860-46ee-a9f9-296a8b2a01a1/trigger/0ac27735-a8f1-4c0f-9b45-fcb333442dad/call/
