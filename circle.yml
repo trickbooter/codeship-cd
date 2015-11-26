@@ -1,0 +1,30 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker info
+    - docker build -t trickbooter/docker-cd .
+
+test:
+  override:
+    # test the code
+    - npm test
+    # test the docker image
+    - docker run -d -p 3000:3000 trickbooter/docker-cd; sleep 10
+    - curl --retry 10 --retry-delay 5 -v http://localhost:3000
+
+deployment:
+  hub:
+    branch: master
+    commands:
+      - docker tag trickbooter/docker-cd tutum.co/trickbooter/docker-cd
+      - docker login tutum.co -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker push tutum.co/trickbooter/docker-cd
+
+## Custom notifications
+notify:
+  webhooks:
+    # Trigger Docker hub build
+    - url: https://registry.hub.docker.com/u/trickbooter/docker-cd/trigger/f0a5dc08-4692-44b1-a119-49c5f3ce2596/
