@@ -12,3 +12,4 @@ EXPOSE 3000
 
 CMD [ "node", "/usr/src/app/app.js" ]
 
+ 
