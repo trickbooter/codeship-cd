@@ -4,7 +4,6 @@
 var signals = {
   'SIGHUP': 1,
   'SIGINT': 2,
-  //'SIGKILL': 9,
   'SIGTERM': 15
 };
 function shutdown(signal, value) {
